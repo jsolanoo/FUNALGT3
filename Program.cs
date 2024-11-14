@@ -1,23 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApp1;
 
-namespace ConsoleApp1
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {public class Estudiante
-            public int Codigo { get; set; }
-            public string Nombre { get; set; }
-            public string Universidad { get; set; }
+        List<Cita> citas = new List<Cita>();
+        int opcion;
 
-            public override string ToString()
+        do
+        {
+            Console.WriteLine("\nMenú:");
+            Console.WriteLine("1. Crear Cita");
+            Console.WriteLine("2. Listar Citas");
+            Console.WriteLine("3. Modificar Universidad");
+            Console.WriteLine("4. Salir");
+            Console.Write("Seleccione una opción: ");
+            opcion = int.Parse(Console.ReadLine());
+
+            switch (opcion)
             {
-                return $"Código: {Codigo}, Nombre: {Nombre}, Universidad: {Universidad}";
+                case 1:
+                    CitaUtil.CrearCita(citas);
+                    break;
+                case 2:
+                    CitaUtil.ListarCitas(citas);
+                    break;
+                case 3:
+                    Console.Write("Texto a buscar: ");
+                    string buscar = Console.ReadLine();
+                    Console.Write("Texto a reemplazar: ");
+                    string reemplazar = Console.ReadLine();
+                    CitaUtil.ModificarUniversidad(citas, buscar, reemplazar);
+                    break;
+                case 4:
+                    Console.WriteLine("Fin del programa.");
+                    break;
+                default:
+                    Console.WriteLine("Opción inválida.");
+                    break;
             }
-        }
+        } while (opcion != 4);
     }
 }
