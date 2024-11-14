@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita.cs" />
+<<<<<<< HEAD
     <Compile Include="CitaUtil.cs" />
     <Compile Include="Estudiante.cs" />
     <Compile Include="Program.cs" />
+=======
+    <Compile Include="Estudiante.cs" />
+>>>>>>> JACK
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

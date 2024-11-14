@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 
 public static class CitaUtil
 {
@@ -58,5 +59,15 @@ public static class CitaUtil
                 cita.Estudiante.Universidad = cita.Estudiante.Universidad.Replace(buscar, reemplazar);
             }
         }
+=======
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class CitaUtil
+    {
+>>>>>>> JACK
     }
 }
